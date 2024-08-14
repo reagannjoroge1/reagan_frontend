@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <link rel="icon" href="/images/moranlogo.jpg">
+    <style>
+        /* Basic styling for the search bar and image container */
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: greenyellow;
+}
+        /* Search bar styling */
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: fixed;
+    float: top;
+    /* color: greenyellow; */
+}
+
+#search-bar input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#search-bar :placeholder-shown
+{color: greenyellow;}
+
+#search-bar button:hover {
+    background-color: #0056b3;
+}
+        /* Image container styling */
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; 
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* width: 150px; */
+}
+
+#image-container img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#image-container .image-item {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    #image-container .image-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    #image-container .image-item {
+        width: 100%;
+    }
+}
+description{
+    color: greenyellow
+}
+    </style>
+</head>
+<body>
+<div><input type="text" id="search-bar" placeholder="Search images by description..."></div>
+
+<div id="image-container"></div>
+
+<script>
+    // JavaScript to handle the search functionality
+    const images = [
+{src:'/images/Moran_drugs/A_drugs/A1.jpg', description: 'ALPHAGAN(2mg/ml)'},
+{src: '/images/Moran_drugs/A_drugs/A2.jpg', description: 'ATENOLOL(100mg)'},
+{src: '/images/Moran_drugs/A_drugs/A3.jpg', description: 'ALENDRONIC(70mg)'},
+{src:"/images/Moran_drugs/A_drugs/A4.jpg",description:"ATENOLOL(50mg)"},
+{src:"/images/Moran_drugs/A_drugs/A5.jpg",description:"ALLOPURINOL(100mg)"},
+{src:"/images/Moran_drugs/A_drugs/A6.jpg",description:"ACICLO

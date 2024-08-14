@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Graduation Checker</title>
+    <style>
+        h1{
+            color: blue;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            /* margin: 30px; */
+            text-align: center;
+        }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/airbnb3.jpg') no-repeat center/cover;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            /* background-image: ; */
+        }
+        .form{
+            background-color: aquamarine;
+            border:2px solid  #0056b3;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 300px; 
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            color: blue;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            color: blue;
+            margin-top: 5px;
+        }
+        .form-group select {
+            width: 100%;
+            color: blue;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            margin-left: 590px;
+            margin-top: 60px;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: none;
+            /* color: ; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Graduation Checker</h1><!-- header -->
+<div class="form"><!-- js form-->
+    <div class="form-group"><!---name form--->
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+    </div>
+    <div class="form-group"><!---GPA form--->
+        <label for="gpa">GPA (0-4.0):</label>
+        <input type="number" id="gpa" step="0.1" min="0" max="4.0">
+    </div>
+    <div class="form-group"><!---Credits form--->
+        <label for="credits">Completed Credits:</label>
+        <input type="number" id="credits">
+    </div>
+    <div class="form-group"><!--extracirricular form--->
+        <label for="extracurricular">Extracurricular Activities:</label>
+        <select id="extracurricular">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+</div>
+    <div class="form-group">
+        <button onclick="checkGraduation()">Check Graduation</button><!------function----->
+    </div>
+    <div class="result" id="result"></div>
+
+    <script>
+        function checkGraduation() {
+            const name = document.getElementById('name').value;//name value
+
+            const gpa = parseFloat(document.getElementById('gpa').value);//gpa value
+
+            const credits = parseInt(document.getElementById('credits').value);//credits value
+
+            const extracurricular = document.getElementById('extracurricular').value;//extracurricular value
+
+            const resultDiv = document.getElementById('result');
+
+            resultDiv.style.display = 'block';
+//conditions if....elseif....else
+            if (!name || isNaN(gpa) || isNaN(credits) || extracurricular === '') {
+                resultDiv.innerHTML = 'Please fill in all fields correctly.';
+
+                resultDiv.style.borderColor = 'red';
+
+                return;
+            }
+
+            let message = `${name} `;
+            let canGraduate = true;
+
+            if (gpa < 2.0) {
+                message += 'does not meet the GPA requirement. ';
+                canGraduate = false;
+            }
+
+            if (credits < 120) {
+                message += 'does not have enough credits. ';
+                canGraduate = false;
+            }
+
+            if (extracurricular === 'no') {
+                message += 'does not participate in extracurricular activities. ';
+                canGraduate = false;
+            }
+
+            if (canGraduate) {
+                message += 'is eligible to graduate!';
+                resultDiv.style.borderColor = 'green';
+                resultDiv.style.borderRadius = '20px';
+                resultDiv.style.backgroundColor= 'white';
+            } 
+            
+            else {
+                
+                message += 'is not eligible to graduate.';
+                resultDiv.style.borderColor = 'red';
+                resultDiv.style.backgroundColor= 'white';
+                resultDiv.style.textAlign=' center';
+            }
+
+            resultDiv.innerHTML = message;
+            resultDiv.style.Color = WebGL2RenderingContext;
+            //output
+}
+    </script>
+    <!-- <? php ?> -->
+</body>
+</html>

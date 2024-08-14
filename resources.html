@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="icon" href="/images/moranlogo.jpg">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+.image_container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+}
+
+.image_container img {
+  width: 300px; /* Adjust width for desired medium size */
+  height: auto;
+  margin: 10px;
+  border: 1px solid #ddd;
+  object-fit: cover;  /* Maintain aspect ratio */
+  opacity: 0.8; /* Initial transparency */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;  /* Combine opacity and transform transitions */
+  max-width: 100%;
+ border-radius: 8px;
+}
+
+.image_container img:hover {
+  opacity: 1;  /* Full opacity on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+.search-container {
+  margin: 20px auto;
+  width: 50%;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.image_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image_container img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  opacity: 1;  /* Initial opacity */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* .image-container img[data-description*=""]:not([data-description*="<?php echo $searchTerm; ?>"]) {
+  opacity: 0;  Hide images not matching search term (visually)
+} */
+/* .image-description {
+  display: none;  /* Initially hide descriptions */
+/* } */ */
+#search-input:focus + .image-container img {
+  opacity: 1;  /* Show all images again on focus */
+}
+#search-results {
+    background-color: greenyellow;
+    padding: 1px;
+  /* Style the search results container (e.g., background color, padding) */
+}
+
+#search-results img {
+  /* Style the image in search results (e.g., width, margin) */
+  width: 120px;
+  margin: 20px;
+}
+p{
+    color: blue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+#search-results p {
+  /* Style the description in search results (e.g., font size, margin) */
+  font-size: 18px;
+  margin: 20px;
+}
+  </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for any medicine...">
+    </div>
+    <div id="search-results"></div>  <div class="image-container">
+    </div>
+  <div class="image_container">
+    <div><a href="dow"></a><img src="/images/Moran_drugs/A_drugs/A1.jpg" alt="A1"><p class="image-description">ALPHAGAN(2mg/ml)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A2.jpg" alt="A2" ><p class="image-description">ATENOLOL(100mg)</p> </div>
+    <div><img src="/images/Moran_drugs/A_drugs/A3.jpg" alt="A3"><p class="image-description">ALENDRONIC(70mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A4.jpg" alt="A4" ><p class="image-description">ATENOLOL(50mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A5.jpg" alt="A5" ><p class="image-description">ALLOPURINOL(100mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A6.jpg" alt="A6"><p class="image-description">ACICLOVIR TABLETS(400mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A7.jpg" alt="A7" ><p class="image-description">ATENOLOL(25mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A8.jpg" alt="A8" ><p class="image-description">ANTEPSIN(1g)</p></div> 
+    <div><img src="/images/Moran_drugs/A_drugs/A9.jpg" alt="A9" ><p class="image-description">ALLOPURINOL(300mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A10.jpg" alt="A10"><p class="image-description">ANUSOL SUPPOSITORIES</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A11.jpg" alt="A11"><p class="image-description">ARICEPT(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A12.jpg" alt="A12"><p class="image-description">AVELOX(400mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A13.jpg" alt="A13"><p class="image-description">AMARYL(4mg)Tablet</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A14.jpg" alt="A14"><p class="image-description">AMARYL(2mg)Tablet</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A15.jpg" alt="A15"><p class="image-description">ANUSOL OINTMENT</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A16.jpg" alt="A16"><p class="image-description">AMARYL(1mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A17.jpg" alt="A17"><p class="image-description">AEROCORT INHALER</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A18.jpg" alt="A18"><p class="image-description">AZATHIOPRINE(50mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A19.jpg" alt="A19" ><p class="image-description">ATACAND(16mg)tablet</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A20.jpg" alt="A20" ><p class="image-description">ATORVASTATIN(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A21.jpg" alt="A21" ><p class="image-description">ATACAND(8mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A22.jpg" alt="A22" ><p class="image-description">AMARYL(3mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A23.jpg" alt="A23" ><p class="image-description">ATORVASTATIN(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/a24.jpg" alt="A24" ><p class="image-description">AERIUS(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A25.jpg" alt="A25" ><p class="image-description">ATARAX(25mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/A26.jpg" alt="A26" ><p class="image-description">ATACAND(16mg/12.5mg)</p></div>
+    <div><img src="/images/Moran_drugs/A_drugs/a28.jpg" alt="A28" ><p class="image-description">AVODART(0.5mg)</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B1.jpg" alt="B1"><p class="image-description">BUDERCORT INHALER</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B2.jpg" alt="B2" ><p class="image-description">BISOPROLOL FUMARATE(10mg) </p> </div>
+    <div><img src="/images/Moran_drugs/B_drugs/B3.jpg" alt="B3"><p class="image-description">BISOPROLOL FUMARATE(2.5mg)</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B4.jpg" alt="B4" ><p class="image-description">BETASERC(8mg)</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B6.jpg" alt="B6"><p class="image-description">BISOPROLOL FILM COATED(1.25mg)</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B7.jpg" alt="B7" ><p class="image-description">BRUFFEN (400mmg)</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B11.jpg" alt="B11" ><p class="image-description">BAZUKA GEL</p></div>
+    <div><img src="/images/Moran_drugs/B_drugs/B12.jpg" alt="B12" ><p class="image-description">BETASERC (24mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/C_drugs/C.jpg" alt="C" ><p class="image-description">CYTOTEC (20ug)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C1.jpg" alt="C1" ><p class="image-description">CORDARONE(200mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C2.jpg" alt="C2" ><p class="image-description">COVERAM(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C3.jpg" alt="C3" ><p class="image-description">COVERAM(10mg/5mg)Tablet</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C4.jpg" alt="C4" ><p class="image-description">CLOPIXOL DEPOT(200ml)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C5.jpg" alt="C5" ><p class="image-description">CLOPIDOGREL FILM COATED TABLETS(75mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C6.jpg" alt="C6" ><p class="image-description">COVERAM(5mg/10mg)Tablet</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C7.jpg" alt="C7" ><p class="image-description">COVERSYL(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C8.jpg" alt="C8" ><p class="image-description">CAFERGOT(1mg/100mg)tablet</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C9.jpg" alt="C9" ><p class="image-description">COLCHICINE(500ug)tablets</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C10.jpg" alt="C10" ><p class="image-description">CANESTEN(20g)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C11.jpg" alt="C11" ><p class="image-description">CLOMID(50mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C12.jpg" alt="C12" ><p class="image-description">CRESTOR(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C13.jpg" alt="C13" ><p class="image-description">CRESTOR(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C14.jpg" alt="C14" ><p class="image-description">CRESTOR</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C15.jpg" alt="C15" ><p class="image-description">CIPRALEX(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/C16.jpg" alt="C16" ><p class="image-description">CIPRALEX(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/C_drugs/ca.jpg" alt="Ca" ><p class="image-description">COLCHICINE(500ug)tablets</p></div>
+
+    <div><img src="/images/Moran_drugs/D_drugs/D1.jpg" alt="D1"><p class="image-description">DILATREND(1.25mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D2.jpg" alt="D2"><p class="image-description">DERMOVATE OINTMENT(20g) </p> </div>
+    <div><img src="/images/Moran_drugs/D_drugs/D3.jpg" alt="D3"><p class="image-description">DUPHASTON(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D4.jpg" alt="D4"><p class="image-description">DIANE(2mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D5.jpg" alt="D5"><p class="image-description">DUREX CONDOM</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D6.jpg" alt="D6"><p class="image-description">DUREX CONDOM</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D7.jpg" alt="D7"><p class="image-description">DUREX CONDOM</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D8.jpg" alt="D8"><p class="image-description">DILATREND(6.5mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/D_drugs/D9.jpg" alt="D9"><p class="image-description">DUREX CONDOM</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D10.jpg" alt="D10"><p class="image-description">DUREX CONDOM </p> </div>
+    <div><img src="/images/Moran_drugs/D_drugs/D11.jpg" alt="D11"><p class="image-description">DUREX CONDOM</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D12.jpg" alt="D12"><p class="image-description">DIGOXIN(125ug)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D13.jpg" alt="D13"><p class="image-description">DAONIL(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D14.jpg" alt="D14"><p class="image-description">DESMOPRESSIN ACETATE(0.2mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D15.jpg" alt="D15"><p class="image-description">DIFLUCAN(150mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D16.jpg" alt="D16"><p class="image-description">DERMOVATE CREAM(20g)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D17.jpg" alt="D17"><p class="image-description">DEPO-MEDROL(40mg/ml)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D18.jpg" alt="D18"><p class="image-description">DUREX CONDOM</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D19.jpg" alt="D19"><p class="image-description">DILATREND(25mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D20.jpg" alt="D20"><p class="image-description">DEPO-MEDROL(80mg/2ml)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D21.jpg" alt="D21"><p class="image-description">DALACIN C(300g)</p> </div>
+    <div><img src="/images/Moran_drugs/D_drugs/D22.jpg" alt="D22"><p class="image-description">DIAMICRON MR(30mg)</p></div>
+    <div><img src="/images/Moran_drugs/D_drugs/D23.jpg" alt="D23"><p class="image-description">DETRUSITOL(2mg)</p></div>
+    <div><img src="/images/Moran_drugs/E_drugs/E1.jpg" alt="E1"><p class="image-description">EXODERIL %1 KREM</p></div>
+    <div><img src="/images/Moran_drugs/E_drugs/E2.jpg" alt="E2"><p class="image-description">EBIXA (10mg)</p></div>
+    <div><img src="/images/Moran_drugs/E_drugs/E3.jpg" alt="E3"><p class="image-description">EPILIM 200</p></div>
+    <div><img src="/images/Moran_drugs/F_drugs/F1.jpg" alt="F1"><p class="image-description">FLUANXOL DEPOT(40mg/2ml)</p></div>
+    <div><img src="/images/Moran_drugs/F_drugs/F2.jpg" alt="F2"><p class="image-description">FINASTERIDE(5mg)TABLETS</p></div>
+    <div><img src="/images/Moran_drugs/F_drugs/F3.jpg" alt="F3"><p class="image-description">FISHERMAN'S FRIEND(25mg)</p></div>
+    <div><img src="/images/Moran_drugs/F_drugs/F4.jpg" alt="F4"><p class="image-description">FLUOXETINE CAPSULES(30 capsules)</p></div>
+
+    <div><img src="/images/Moran_drugs/G_drugs/G1.jpg" alt="G1"><p class="image-description">GALVUS VILDAGLIPTIN(50mg)</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G2.jpg" alt="G2"><p class="image-description">GALVUS MET(50mg/1000mg)</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G3.jpg" alt="G3"><p class="image-description">GALVUS MET(50mg/850mg)</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G4.jpg" alt="G4"><p class="image-description">GLYCEROL (2g) SUPPOSITORIES</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G5.jpg" alt="G5"><p class="image-description">GLYCEROL (4g) SUPPOSITORIES</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G6.jpg" alt="G6"><p class="image-description">GETRYL(GLIMEPIRIDE) 4mg</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G7.jpg" alt="G7"><p class="image-description">GLYCEROL (1g) SUPPOSITORIES</p></div>
+    <div><img src="/images/Moran_drugs/G_drugs/G8.jpg" alt="G8"><p class="image-description">GVAGZOL</p></div>
+    
+    <div><img src="/images/Moran_drugs/I_drugs/I1.jpg" alt="I1"><p class="image-description">ISOPTIN SR(240mg)</p></div>
+    
+    <div><img src="/images/Moran_drugs/J_drugs/J1.jpg" alt="J1"><p class="image-description">JANUMET (50/1000mg)</p></div>
+ 
+    <div><img src="/images/Moran_drugs/K_drugs/K1.jpg" alt="K1"><p class="image-description">KAMAGRA ORAL JELLY</p></div>
+    <div><img src="/images/Moran_drugs/K_drugs/K2.jpg" alt="K2"><p class="image-description">KEPPRA(500mg)</p></div>
+    <div><img src="/images/Moran_drugs/K_drugs/K3.jpg" alt="K3"><p class="image-description">KEPPRA(100mg/ml)</p></div>
+    <div><img src="/images/Moran_drugs/K_drugs/K4.jpg" alt="K4"><p class="image-description">KEPPRA(250mg)</p></div>
+    <div><img src="/images/Moran_drugs/K_drugs/K5.jpg" alt="K5"><p class="image-description">K-CORT INJECTION</p></div>
+    <div><img src="/images/Moran_drugs/K_drugs/K6.jpg" alt="K6"><p class="image-description">KLACiD(500mg)</p></div>
+    <div><img src="/images/Moran_drugs/K_drugs/K7.jpg" alt="K7"><p class="image-description">K-Y</p></div>
+
+    <div><img src="/images/Moran_drugs/L_drugs/L1.jpg" alt="L1"><p class="image-description">LIPIGET [ATORVASTATIN] (10mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L2.jpg" alt="L2"><p class="image-description">LEMSIP MAX(16 Capsules)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L3.jpg" alt="L3"><p class="image-description">LIPITOR(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L4.jpg" alt="L4"><p class="image-description">LAMICTAL(25mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L5.jpg" alt="L5"><p class="image-description">LABETALOL HYDROCHLORIDE TABLETS USP (200mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L6.jpg" alt="L6"><p class="image-description">LEMSIP(5 Sachets)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L7.jpg" alt="L7"><p class="image-description">LEMSIP MAX COLD & FLU(10 Sachets)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L9.jpg" alt="L8"><p class="image-description">LYRICA(Pregabalin 75mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L10.jpg" alt="L10"><p class="image-description">LEMSIP MAX DAY & NIGHT(16 Capsules)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L11.jpg" alt="L11"><p class="image-description">LEFLOX[LEVOFLOXACIN](500mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L12.jpg" alt="L12"><p class="image-description">LISINOPRIL(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L13.jpg" alt="L13"><p class="image-description">LEFLOX[LEVOFLOXACIN](750mg)</p></div>
+    <div><img src="/images/Moran_drugs/L_drugs/L14.jpg" alt="L14"><p class="image-description">LAMICTAL(100mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/M_drugs/M1.jpg" alt="M1"><p class="image-description">CHARCOAL (WHITENING) MOUTHWASH(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/M_drugs/M2.jpg" alt="M2"><p class="image-description">MYCOPHENOLATE (360mg)</p></div>
+    <div><img src="/images/Moran_drugs/M_drugs/M3.jpg" alt="M3"><p class="image-description">MIRTAZAPINE FILM COATED TABLETS(15mg)</p></div>
+    <div><img src="/images/Moran_drugs/M_drugs/M4.jpg" alt="M4"><p class="image-description">MEMANTINE HYDROCHLORIDE FILM COATED TABLETS(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/M_drugs/M5.jpg" alt="M5"><p class="image-description">MESTINON COMPRESSE(60mg)</p></div>
+    <div><img src="/images/Moran_drugs/M_drugs/M6.jpg" alt="M6"><p class="image-description">MORATECH BLOOD PRESSURE MONITOR</p></div>
+
+    <div><img src="/images/Moran_drugs/N_drugs/N1.jpg" alt="N1"><p class="image-description">NATRILX SR</p></div>
+    <div><img src="/images/Moran_drugs/N_drugs/N2.jpg" alt="N2"><p class="image-description">NORVASC(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/N_drugs/N3.jpg" alt="N3"><p class="image-description">NYTOL HERBAL Tablets</p></div>
+    <div><img src="/images/Moran_drugs/N_drugs/N4.jpg" alt="N4"><p class="image-description">NORVASC(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/N_drugs/N5.jpg" alt="N5"><p class="image-description">NEXIUM(40mg)</p></div>
+    <div><img src="/images/Moran_drugs/N_drugs/N6.jpg" alt="N6"><p class="image-description">NEATEETH(50ml)</p></div>
+    <div><img src="/images/Moran_drugs/N_drugs/N7.jpg" alt="N7"><p class="image-description">NEXIUM(20mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/O_drugs/O1.jpg" alt="O1"><p class="image-description">OLD SPICE ROCK</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O2.jpg" alt="O2"><p class="image-description">OLD SPICE CAPTAIN</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O3.jpg" alt="O3"><p class="image-description">OPTREX EYE DROPS</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O4.jpg" alt="O4"><p class="image-description">OPTREX EYE DROPS</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O5.jpg" alt="O5"><p class="image-description">OTRIVINE</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O6.jpg" alt="O6"><p class="image-description">OPTREX EYE DROPS</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O7.jpg" alt="O7"><p class="image-description">OPTREX EYE WASH</p></div>
+    <div><img src="/images/Moran_drugs/O_drugs/O8.jpg" alt="O8"><p class="image-description">ONE CALL PLUS</p></div>
+
+    <div><img src="/images/Moran_drugs/P_drugs/P1.jpg" alt="P1"><p class="image-description">PLAVIX (75mg)</p></div>
+    <div><img src="/images/Moran_drugs/P_drugs/P2.jpg" alt="P2"><p class="image-description">PRIMOLUT N(Norethisone)</p></div>
+    <div><img src="/images/Moran_drugs/P_drugs/P3.jpg" alt="P3"><p class="image-description">PRED FORTE(5ml)</p></div>
+    <div><img src="/images/Moran_drugs/P_drugs/P4.jpg" alt="P4"><p class="image-description">POLIGRIP</p></div>
+    <div><img src="/images/Moran_drugs/P_drugs/P5.jpg" alt="P5"><p class="image-description">PEARL DROPS</p></div>
+
+    <div><img src="/images/Moran_drugs/R_drugs/R1.jpg" alt="R1"><p class="image-description">RISPERIDONE(3mg)</p></div>
+    <div><img src="/images/Moran_drugs/R_drugs/R2.jpg" alt="R2"><p class="image-description">ROSUVASTATIN(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/R_drugs/R3.jpg" alt="R3"><p class="image-description">ROVISTA(20mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/S_drugs/S1.jpg" alt="S1"><p class="image-description">SINEMET EXTRA(25/100MG)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S2.jpg" alt="S2"><p class="image-description">SUSTANON (250mg/ml)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S3.jpg" alt="S3"><p class="image-description">STUGERON(25mg)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S4.jpg" alt="S4"><p class="image-description">SUDOCREM</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S5.jpg" alt="S5"><p class="image-description">SIMVASTATIN(40mg)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S6.jpg" alt="S6"><p class="image-description">SIMVASTATIN(40mg)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S7.jpg" alt="S7"><p class="image-description">SPLETAL(100mg)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S9.jpg" alt="S8"><p class="image-description">SPASMOMEN(40mg)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S10.jpg" alt="S9"><p class="image-description">SKILAX(30ml)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S11.jpg" alt="S10"><p class="image-description">FLAVOURED LUBE</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S12.jpg" alt="S11"><p class="image-description">SIMVASTATIN(100mg)</p></div>
+    <div><img src="/images/Moran_drugs/S_drugs/S11.jpg" alt="S12"><p class="image-description">SINEMET(25/250mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/T_drugs/T1.jpg" alt="T1"><p class="image-description">TOOTHPASTE(CHARCOAL)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T2.jpg" alt="T2"><p class="image-description">TOOTHPASTE(BAMBOO)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T3.jpg" alt="T3"><p class="image-description">TRIPLIXAM(10mg/2.5mg/10mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T4.jpg" alt="T4"><p class="image-description">TRAJENTA(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T5.jpg" alt="T5"><p class="image-description">TRIPLIXAM(10mg/2.5mg/5mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T6.jpg" alt="T6"><p class="image-description">TRIPLIXAM(5mg/1.25mg/5mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T7.jpg" alt="T7"><p class="image-description">TREVIA(100mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T8.jpg" alt="T8"><p class="image-description">TAMSOLIN(0.4mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T9.jpg" alt="T9"><p class="image-description">TENORMIN(100mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T10.jpg" alt="T10"><p class="image-description">TAVANIC(500mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T11.jpg" alt="T11"><p class="image-description">TENORMIN(50mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T12.jpg" alt="T12"><p class="image-description">TRAVOCORT (10mg/g+1 mg/gKrem)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T13.jpg" alt="T13"><p class="image-description">TRAVOGEN CREAM(1%)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T14.jpg" alt="T14"><p class="image-description">TADARISE-20(20mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T15.jpg" alt="T15"><p class="image-description">TRAVOGEN %1 KREM</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T16.jpg" alt="T16"><p class="image-description">TRIPLIXAM(5mg/1.25mg/10mg)</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T17.jpg" alt="T17"><p class="image-description">TIOVA INHALER</p></div>
+    <div><img src="/images/Moran_drugs/T_drugs/T18.jpg" alt="T18"><p class="image-description">TAMSOLIN(0.4mg)</p></div>
+    
+    <div><img src="/images/Moran_drugs/V_drugs/V1.jpg" alt="V1"><p class="image-description">VESICARE(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/V_drugs/V2.jpg" alt="V2"><p class="image-description">VIGAMOX(5mg/ml)</p></div>
+    <div><img src="/images/Moran_drugs/V_drugs/V3.jpg" alt="V3"><p class="image-description">VENLAFAXINE(37.5mg)</p></div>
+    <div><img src="/images/Moran_drugs/V_drugs/V4.jpg" alt="V4"><p class="image-description">VESICARE(5mg)</p></div>
+    <div><img src="/images/Moran_drugs/V_drugs/V5.jpg" alt="V5"><p class="image-description">VASTAREL(35mg)</p></div>
+    <div><img src="/images/Moran_drugs/V_drugs/V6.jpg" alt="V6"><p class="image-description">VENZIP(75mg)</p></div>
+    <div><img src="/images/Moran_drugs/V_drugs/V7.jpg" alt="V7"><p class="image-description">VENOFER(100mg)</p></div>
+
+    <div><img src="/images/Moran_drugs/X_drugs/X1.jpg" alt="X1"><p class="image-description">XATRAL XL(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/X_drugs/X2.jpg" alt="X2"><p class="image-description">XARELTO(20mg)</p></div>
+    
+    <div><img src="/images/Moran_drugs/Z_drugs/Z1.jpg" alt="Z1"><p class="image-description">ZYPREXA(10mg)</p></div>
+    <div><img src="/images/Moran_drugs/Z_drugs/Z2.jpg" alt="Z2"><p class="image-description">ZYPREXA(5mg)</p></div>
+    <!-- <div><img src="/images/Moran_drugs/T_drugs/T19.jpg" alt="T18"><p class="image-description">SINEMET(25/250mg)</p></div> -->
+</div>
+ <script>
+    document.getElementById('searchBar').addEventListener('input', function() {
+    let filter = this.value.toLowerCase();
+    let images = document.querySelectorAll('.image-item');
+
+   
+    images.forEach(function(image) {
+        let altText = image.alt.toLowerCase();
+        
+        if (altText.includes(filter))
+        {
+            image.style.display = '';
+        } 
+        else {
+            image.style.display = 'none';
+        }
+    });
+});
+</script>
+    <!-- <script>
+    const searchInput = document.getElementById("search-input");
+    const image_container= document.querySelectorAll(".image_container");
+    const searchResults = document.getElementById("search-results");
+
+searchInput.addEventListener("keyup", function() {//function that
+  const searchTerm = this.value.toLowerCase();
+  searchResults.innerHTML = ""; 
+
+  imageContainer.forEach(container=> {
+    const image = container.querySelector("img");
+    const description = container.querySelector(".img-description").textContent.toLowerCase();
+    if (description.includes(searchTerm)) {
+      const resultElement = document.createElement("div");
+      resultElement.classList.add("search-result");  // Add a class for styling
+      resultElement.appendChild(image.cloneNode(true));  // Clone image for result
+      resultElement.appendChild(document.createTextNode(description));
+      searchResults.appendChild(resultElement);
+    }
+  });
+});
+</script> -->
+</body>
+</html>

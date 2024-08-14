@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex_prototype</title>
+  <style>
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  margin-top: 150px;
+  margin-left:17%;
+  padding:1px 16px;
+  height:900px; 
+  /* max-width: 100px; */
+  height: auto;
+}
+li i{  
+  width: 20px;
+  display: block;
+  color: black;
+  margin-top: -200px;
+  margin-left: -300px;
+  padding: 50px 50px;
+  text-decoration: none;
+  }
+li i.active{
+background-color: green;
+color: white;
+}
+li i:hover:not(.active){
+background-color: blue;
+color: white;
+}
+.proj{ 
+background-color: rgba(128, 128, 128, 0.37); 
+border: 2px solid black;
+width: 2200px;
+height: 800px;
+}
+.flex{
+  /* display: flex;
+  margin:200px;
+  padding: 200px; */
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin: 60px;
+  margin-left: 800px;
+  width: 800px;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1200px) {
+  .flex{
+  flex-direction: column;
+  margin-left: 300px;
+  }
+  .proj{
+  height: 3000px;
+  width: 5000px;
+  }
+}
+  .flex > .david{
+  background-color: rgba(255, 255, 255, 0.993);
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.308);
+  width: 450px;
+  height:370px;
+  margin: 20px;
+  text-align: center;
+  line-height: 25px;
+}
+ .flex > .balbina{
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.308);
+  width: 450px;
+  height: 370px;
+  margin: 20px;
+  text-align: center;
+  line-height: 25px; 
+}
+ .flex > .the_rock {
+  background-color:white;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.308);
+  width: 450px;
+  height: 370px;
+  margin: 20px;
+  text-align: center;
+  line-height: 25px;
+}
+.flex > .gosling{
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.342);
+  width: 450px;
+  height: 370px;
+  margin: 20px;
+  text-align: center;
+  /* text-align: center; */
+  line-height: 25px;
+}
+.btn > button{
+  width: 420px;
+  border-color: rgba(0, 128, 0, 0.527);
+  border-radius: 15px;
+  margin-top: 15px;
+  padding: 5px;
+  font-size: 25px;
+}
+.details{
+  background-color: white;
+  border-collapse: collapse;
+  margin-left: -1380px;
+}
+.details td, .details th{
+  padding: 8px;
+}
+.details tr:nth-child(even){
+  background-color: rgba(128, 128, 128, 0.61);
+}
+</style>
+</head>
+<body>
+<h1 style="margin-left: 329px; margin-bottom: -43px;">Attendance</h1>
+<div class="proj">
+  <div class="flex">
+    <div class="david">
+    <div class="image">
+       <img src="images/leonardo.jpg" alt="dicaprio" width="80px">
+    </div>
+       <h2>SAM DAVID</h2>
+            <h3>UI DESIGNER</h3>
+              <table style="font-size:large; margin-left: 170px;margin-top: 45px;">
+                <tr>
+                 <th style="background-color: rgba(128, 128, 128, 0.507);">85%</th>
+                      <th style="background-color: rgba(128, 128, 128, 0.507);">87%</th>
+                         </tr>
+                       <tr>
+                    <td>Month</td>
+                <td>Year</td>
+            </tr>
+        </table>
+     <div class="btn"><button type="button" onclick="alert('Sam-A User Interface developer')">Profile</button></div> 
+    </div>
+    <div class="balbina">
+    <img src="images/ryan reynolds.jpg" alt="reynolds" width="80px">
+    <h2>BALBINA KHER</h2>
+           <h4 style="margin-top:-7px;">PROGRAMMER</h4>
+             <table style="font-size:large; margin-left: 170px;margin-top: 45px;">
+               <tr>
+                <th style="background-color: rgba(128, 128, 128, 0.507);">82%</th>
+                     <th style="background-color: rgba(128, 128, 128, 0.507);">85%</th>
+                        </tr>
+                      <tr>
+                   <td>Month</td>
+               <td>Year</td>
+           </tr>
+       </table>
+       <div class="btn"><button type="button" onclick="alert('Balbina-A Programmer')">Profile</button></div>
+    </div> 
+    <div class="the_rock">
+      <img src="images/dwayne.jpg" alt="dwayne" width="70px" border-radius="50%" object-fit="cover">
+       <h2>BADAN JOHN</h2>
+         <h3>TESTER</h3>
+           <table style="font-size:large; margin-left: 170px;margin-top: 40px;">
+             <tr>
+              <th style="background-color: rgba(128, 128, 128, 0.507);">84%</th>
+                   <th style="background-color: rgba(128, 128, 128, 0.507);">92%</th>
+                      </tr>
+                    <tr>
+                 <td>Month</td>
+             <td>Year</td>
+         </tr>
+     </table>
+<div class="btn"><button type="button" onclick="alert('John-A Tester')">Profile</button></div>
+    </div> 
+    <div class= "gosling">
+    <img src= "./images/gosling.jpg" alt="gosling" width="70px" border-radius="50%" object-fit="cover">
+     <h2>SALINA MICHEAL</h2>
+       <h4>UI DESIGNER</h4>
+         <table style="font-size:large; margin-left: 170px; margin-top: 20px;">
+           <tr>
+            <th style="background-color: rgba(128, 128, 128, 0.507);">85%</th>
+                 <th style="background-color: rgba(128, 128, 128, 0.507);">82%</th>
+                    </tr>
+                  <tr>
+               <td>Month</td>
+           <td>Year</td>
+       </tr>
+   </table>
+ <div class="btn"><button type="button" onclick="alert('Salina-A User Interface designer')">Profile</button></div>
+ <div>
+</div>
+<div>
+  <div><h2 style="margin-left: -2970px; margin-top: 43px;">Attendance List</h2></div>
+    <div class="details">
+            <table style="width: 1810px; background-color: white;"> 
+            <tr style="background-color: rgba(0, 128, 0, 0.884);">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Depart</th>
+            <th>Date</th>
+            <th>Join Time</th>
+            <th>Logout Time</th>
+            <th>Details</th>
+            </tr>
+            <tr>
+            <td>01</td>
+            <td>Sam David</td>
+            <td>Design</td>
+            <td>03-24-22</td>
+            <td>8:00am</td>
+            <td>3:00pm</td>
+            <td><button>View</button></td>
+            </tr>
+            <tr style="color: rgba(0, 128, 0, 0.884)">
+            <td>02</td>
+            <td>Barbina Kher</td>
+            <td>Coding</td>
+            <td>03-24-22</td>
+            <td>9:00am</td>
+            <td>4:00pm</td>
+            <td><button>View</button></td>
+            </tr>
+            <tr>
+            <td>03</td>
+            <td>Badan John</td>
+            <td>Testing</td>
+            <td>03-24-22</td>
+            <td>8:00am</td>
+            <td>3:00pm</td>
+            <td><button>View</button></td>
+            </tr>
+            <tr style="border-bottom: green;" >
+            <td>04</td>
+            <td>Sara David</td>
+            <td>Design</td>
+            <td>03-24-22</td>
+            <td>8:00am</td>
+            <td>3:00pm</td>
+            <td><button>View</button></td>
+            </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+ <div class="nav">
+     <ul style="margin-left:300px;list-style-type: none; width:20px; height:300px; margin-top: -750px;">
+      <li style="margin-top:-350px; color: aqua;"><i class="fa fa-signal"></i></li>
+      <li> <i class="fa fa-menorah"></i></li>
+      <li> <i class="fa fa-signal"></i></li>
+      <li><i class="fa fa-comment"></i>
+      <li><i class="fa fa-database"></i></li>
+      <li><i class="fa fa-bar-chart"></i></li>
+      <li><i class="fa fa-gear"></i></li>
+      <ul><li style="list-style-type:none; margin-left: -39px; margin-top: 270px;"><i class="fa fa-up-from-bracket"></i></li></ul>
+      <ul><li style="list-style-type:none; margin-left: -39px; margin-top: 275px;"><i class="fa fa-file"></i></li></ul>
+      <ul><li style="list-style-type:none; margin-left: 1690px; margin-top: -920px;"><i class="fa fa-user-gear"></i></li></ul>
+      <ul><li style="list-style-type:none; margin-left: 2020px; margin-top: -780px;"><i class="fa fa-user"></i></li></ul>
+    </ul>
+    </div>
+</body>
+</html>

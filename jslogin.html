@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="images/REAGAN (1).jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airbnb Login</title>
+  <style>
+    h2{
+        text-align: center;
+        font-size: 30px;
+        color: aqua;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('./images/airbnb3.jpg');
+    }
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    #message{
+     font-size: larger;
+     color: brown;
+     background-color: aqua;
+     width:350px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Airbnb Login</h2>
+
+  <form id="loginForm">
+    <label for="firstName">Firstname</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Lastname</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <input type="submit" value="Login" >
+  </form>
+
+  <div id="message"></div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      var firstName= document.getElementById("firstName").value; 
+      var lastName = document.getElementById("lastName").value; 
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (firstName ==="Reagan" && lastName ==="Njoroge" && username === "reagannjoroge7@gmail.com" 
+          && password === "12345678") {
+        showMessage("Login successful!");
+        redirectToAirbnb();
+      } 
+      
+      else {
+        showMessage("Invalid username or password.");
+      }
+    });
+
+    function showMessage(message) {
+      document.getElementById("message").innerText = message;
+    }
+    function redirectToAirbnb(){
+      window.location.href = "lastcss_prototype.html";
+    }
+  </script>
+
+</body>
+</html>

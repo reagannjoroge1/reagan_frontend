@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat_revision</title>
+    <style>
+        /* .Item1{grid-area: Header;}
+        .Item2{grid-area: Menu;}
+        .Item3{grid-area: Main;}
+        .Item4{grid-area: Right;}
+        .Item5{grid-area: Footer;} */
+
+        .grid_container{
+            display: grid;
+            grid-template-columns: auto auto auto; 
+            /* grid-template-areas: 'Header Header Header Header Header'
+                                 'Menu Main Main Main'
+                                 'Menu Main Main Main Right Right'
+                                 'Menu Footer Footer Footer Footer Footer'; */
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;                     
+        }
+
+        .grid_container>div{
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+        <div class="item1">Header</div>
+        <div class="Item2">Menu</div>
+        <div class="Item3">Main</div>
+        <div class="Item4">Right</div>
+        <div class="Item5">Footer</div>
+    </div>
+</body>
+</html>

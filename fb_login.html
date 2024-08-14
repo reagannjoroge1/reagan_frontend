@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/REAGAN (1).jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <style>
+             body{
+                background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.24)), url('./images/everest.jpg')no-repeat center/cover;
+            }
+
+            .sea{
+                background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.24)), url('./images/everest.jpg') no-repeat center center/cover;
+                width: 600px;
+                height: 800px;
+                /* margin-left:300px;  */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                height: auto;
+                /* text-align: center; */
+            }
+            .head{
+                text-align: center;
+                color: white;
+                /* font-weight: bold; */
+            } 
+            .inside{
+            text-align: center;
+            justify-content: center;
+            width: 60%;
+            height: 34rem;
+            background-color: rgba(165, 42, 42, 0.493);
+            margin-left: 120px;
+            margin-top: 30px;
+            }
+            /* .user > image{
+                border-radius: 50%;
+                object-fit: cover;
+            } */
+            /* .user{
+            width: 30px;
+            height: 30px;
+            } */
+            .login{
+                color: cyan;
+                border-bottom: 1px solid white;
+                padding-top: 2px;
+                /* margin: 5px; */
+            }
+            .first{
+                /* background-color: rgba(165, 42, 42, 0.39); */
+                width: 280px;
+                margin-left: 20px;
+                text-align: justify;
+                margin-top: 40px;
+            }
+            .second{
+                /* background-color: rgba(165, 42, 42, 0.39); */
+                max-width: 120px;
+                margin-left: 20px;
+                text-align: justify;
+                
+            }
+            
+            .btn > button{
+            
+                max-width: 30px;
+                
+            }
+            .join{
+                border-top: 2px solid white;
+                margin-top: -111px;
+            }
+           .rights{
+               color: white;
+               text-align: center;
+               margin: 40px;
+            }
+    </style>
+</head>
+<body>
+    <div class="sea">
+        <div class="head"><h1>Profile Login Form</h1></div>
+        <div class="inside">
+            <div class="user">
+             <img style="width: 70px;margin-top: 10px; object-fit: contain; border-radius: 50%; " src="./images/hos.jpg" alt="wiston">
+            </div>
+            <div class="login">
+                <h2>Login</h2>
+            </div>                         
+            <div style="color: white;"> 
+              <form class="first">
+                <label  style="display: inline-block;" for="emailadd">Your E-mail address or username:</label><br>
+                  <input class="fa fa-address-book"style="background-color: rgb(165, 42, 42);color: rgb(255, 255, 255); border: none;" type="text" id="emailadd" name="emailadd"  placeholder="myusername or mymail@gmail.com" class="fa fa-address-book"><br><br>
+            <!-- </form> -->
+            <!-- <form class="second"> -->
+                    <label style="text-align: justify;" for="pass">Your Password:</label><br>
+                  <input style=" background-color: rgb(165, 42, 42);color: white; border: none;" type="text" id="pass" name="pass"  class="fa fa-key"placeholder="egpassword@#$%&" ><br><br>
+              </form>
+            </div>
+            <div class="btn"> 
+            <span>
+                
+                <script>
+            function myLogin(){
+                    document.getElementById("demo").innerHTML= "Incorrect Password";
+            }
+            </script>
+
+            
+            <p id="demo"></p>
+            <ul style="float: left;margin-left: -14px;color: white; list-style-type: square;"><li>keep me logged in.</li></ul>
+            <button 
+            type="button"
+            onclick="myLogin()"
+            style=" width: 30%; height: 100%; background-color: rgba(165, 42, 42, 0.39); color: white; border: 1px solid white; margin-left:200px;margin-top: 50px;padding: 10px;">login</button>                                                                                                                                                                                                                              
+            </span><br><br><br><br><br><br><br><br></div>
+          
+           <div class="join"> 
+           <span style="border-top: 2px solid white;"><p  style=" color: white;">Not a member yet?
+           <button  style="background-color: rgba(165, 42, 42, 0.39);color: white;border: 1px solid white;padding: 10px;"><a href="index.html"></a>Join us</button></p></span></div>
+        </div>
+        <div class="rights"><p>@ 2018 Profile Login Form All Rights Reserved | by w3layouts</p></div>
+    </div>
+</body>
+</html>                                                              

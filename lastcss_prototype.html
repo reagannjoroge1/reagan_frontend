@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lastcss_prototpe</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    .header{
+        background-color: rgba(255, 255, 255, 1.0);
+        color: red;
+        position: sticky;
+        width: 1600px;
+        top: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        color: blue;
+        position: sticky;
+        top: 40px;
+        word-spacing: 80px;
+        height: 145px;
+        width: 1600px;
+        text-align: center;
+        font-family: arial;
+        font-size: 23px;
+    }
+    .grid_container{
+        display: grid;
+        grid-template-columns: auto auto auto; 
+        justify-content: center;
+        align-items: center;
+        margin-left: 140px;
+        gap: 10px;
+        }
+    
+    @media  only screen and(max-width:320px) {
+        body{ 
+            flex-direction: column;
+            margin: auto;
+            text-align: center;
+        } 
+        .nav{
+            display: inline;
+          white-space: nowrap;
+          overflow-x: auto;
+            }
+        }
+    @media  only screen and(max-width:768px) {
+        body{ 
+            flex-direction: column;
+            margin-left: 20px;
+            text-align: center; 
+           }
+        .nav{
+          white-space: nowrap;
+          overflow-x: auto;
+            }
+        }
+    @media  only screen and(max-width:1200px) {
+        body{ 
+            flex-direction: column;
+            margin: auto;
+            text-align: center; 
+           }
+        }
+    img{
+        border-radius: 30px;
+      }
+.desc{
+        text-align: left;
+        font-size: 20px;
+    }
+    .icon{
+     margin-left: 450px;
+    }
+    .grid_container>button{
+        position: sticky;
+        bottom: 120px;
+        right: 0;
+        padding: 20px;
+        margin: auto;
+        width: 170px;
+        font-size: 20px;
+        border: none;
+        border-radius: 35px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.836);
+    }
+    .grid_container>button:hover{
+        padding: 25px;
+    }
+    .footer{
+        word-spacing: 7px;
+        background-color: white;
+        padding: 7px;
+        position: sticky;
+        bottom: 0;
+        font-size: 28px;
+        width: 1490px;
+    }
+    .footer2{
+        font-size: 28px;
+        float: right;
+    }
+    .like{
+        margin-top: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fa fa-angle-double-up">Airbnb</i></h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <i class="fa fa-signal"><br><br>minsus</i>
+            <i class="fa fa-telegram"><br><br>desert</i>
+            <i class="fa fa-comment"><br><br>A-frames</i>
+            <i class="fa fa-database"><br><br>Vineyards</i>
+            <i class="fa fa-bar-chart"><br><br>skiing</i>
+            <i class="fa fa-gear"><br><br>Campers</i>
+            <i class="fa fa-file"><br><br>golf</i>
+            <i class="fa fa-user"><br><br>historical</i>
+            <i class="fa fa-address-book"><br><br>cycladic</i>
+        </ul>
+   </div>
+   <div class="grid_container">
+    <div class="first">
+        <img src="./images/airbnb1.jpg" alt="airbnb1" style="width: 500px; height: 500px;">
+        <span class="desc">
+            <span class="icon"><i class="fa fa-star">5.0</i></span>
+            <P style="color: brown"><b>Jinja, UG</P> <p>Jan, 20<sup>th</sup></b></p>
+            <p style="color: aqua;">42 Kilometres away</p>
+            <p style="color:rgba(0, 128, 28, 0.795);">$137 per night</p>
+          </span>
+    </div>
+    <div class="second">
+        <img src="./images/airbnb2.jpg" alt="airbnb2" style="width:500px; height: 500px;">
+        <span class="desc">
+            <span class="icon"><i class="fa fa-star">2.0</i></span>
+            <P style="color: brown"><b>Thika ,KE</P> <p>Jan, 20<sup>th</sup></b></p>
+            <p style="color: aqua;">204 Kilometres away</p>
+            <p style="color:rgba(0, 128, 28, 0.795);">$7 per night</p>
+        </span>
+    </div>
+    <div> <img src="./images/airbnb3.jpg" alt="airbnb3" style="width: 500px; height: 500px;"><span id="like">
+        <span class="desc">
+        <span class="icon"><i class="fa fa-star">5.0</i></span>
+        <P style="color: brown"><b>Chicago, US</P> <p>July, 3<sup>rd</sup></b></p>
+        <p style="color: aqua;">12 Kilometres away</p>
+        <p style="color:rgba(0, 128, 28, 0.795);">$607 per night</p>
+    </span>
+    </div>
+    <div class="fourth"><img src="./images/airbnb4.jpg" alt="airbnb4" style="width: 500px; height: 500px;">
+         <span class="desc">
+            <span class="icon"><i class="fa fa-star">3.0</i></span>
+            <P style="color: brown"><b>Nairobi, KE</P> <p>Aug, 20<sup>th</sup></b></p>
+            <p style="color: aqua;">40 Kilometres away</p>
+            <p style="color:rgba(0, 128, 28, 0.795);">$37 per night</p>
+        </span>
+    </div>
+    <div class="fifth"><img src="./images/airbnb5.jpg" alt="airbnb5" style="width: 500px; height: 500px;">
+        <span class="desc"> 
+            <span class="icon"><i class="fa fa-star">4.5</i></span>
+            <P style="color: brown"><b>Ruiru, KE</P> <p>July, 24<sup>th</sup></b></p>
+            <p style="color: aqua;">20 Kilometres away</p>
+            <p style="color:rgba(0, 128, 28, 0.795);">$87 per night</p>
+        </span>
+    </div>
+    <div class="sixth"><img src="./images/airbnb6.jpg" alt="airbnb6" style="width: 500px; height: 500px;">
+        <!-- <span id="like"><i class="fa fa-heart"></i></span> -->
+        <span class="desc">
+            <span class="icon"><i class="fa fa-star">1.0</i></span>
+            <P style="color: brown"><b>Dodoma, TZ</P> <p>May, 3<sup>rd</sup></b></p>
+            <p style="color: aqua;">12 Kilometres away</p>
+            <p style="color:rgba(0, 128, 28, 0.795);">$3 per night</p>
+         </span>
+    </div>
+    <div class="seventh"><img src="./images/airbnb7.jpg" alt="airbnb7" style="width: 500px; height: 500px;">
+        <!-- <span id="like"><i class="fa fa-heart"></i></span> -->
+        <span class="desc">
+            <span class="icon"><i class="fa fa-star">3.5</i></span>
+            <P style="color: brown"><b>Kampala, UG</P> <p>Dec, 9<sup>th</sup></b></p>
+            <p style="color: aqua;">2 Kilometres away</p>
+            <p style="color:rgba(0, 128, 28, 0.795);">$13 per night</p>
+         </span>
+   
+</div>
+    <button>Show Map<span style="color: white"><i class="fa fa-map-o"></i></span></button>
+</div>
+    
+    <div class="footer">
+     <p>
+      <i style="color: purple;" class="fa fa-copyright">2023</i>
+       <span>Airbnb,inc. Term & Service apply. Site map. Privacy.
+        <button><i class="fa fa-tick"></i><i class="fa fa-xing-square"></i></button>Destinations.
+        </span><br>
+        <span class="footer2"><i class="fa fa-globe">English (US)</i>
+        <i style="text-align: center; color: red;" class="fa fa-dollar">USD</i>upport and resources<i class="fa fa-angle-up"></i>
+     </p>
+       </span>
+    </div>
+
+</body>
+</html>

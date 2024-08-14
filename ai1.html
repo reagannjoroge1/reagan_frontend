@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/images/moranlogo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moran Pharmacy Limited</title>
+    
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+a{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    color: blueviolet;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+a:hover{
+    color: #ffdd57;
+}
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e0e0e0;
+    font-size: 30px;
+}
+
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+.product-item>p {
+    margin-bottom: -12px;
+    /* margin-top: 30px; */
+}
+
+.product-item img {
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform 0.3 ease;
+    border-radius: 8px;
+}
+.product-item img:hover {
+    transform: scale(1.2); /* Adjust the scale value as needed */
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+}
+
+.signup-button {
+    /* display:block; */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.signup-button:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="https://moranpharma.com/" target="_blank">Home</a></li>
+                <li><a href="about2.0.html" target="_blank">About</a></li>
+                <li><a href="contacts.html" target="_blank">Contacts</a></li>
+                <li><a href="resources2.html" target="_blank">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Moran PharmaCare</h1>
+            <p>Your trusted source for pharmaceutical products</p>
+            <img src="/images/moranlogo.jpg" alt="moran" >
+        </section>
+
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="/images/moran4.jpg" alt="Medicine 1">
+                    <p>ORELOX 100mg</p>
+                </div>
+                <div class="product-item">
+                    <img src="/images/moran5.jpg" alt="Medicine 2">
+                    <p>LYRICA (preglabalin) 75mg</p>
+                </div>
+                <div class="product-item">
+                    <img src="/images/moran6.jpg" alt="Medicine 3">
+                    <p>PRED FORTE STERILE 5ml</p>
+                </div>
+                <p><a href="resources2.html">other products</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Do you want to create an accout with us?</p>
+        <a href="ai2.html"  target="_blank" class="signup-button">Sign Up</a>
+    </footer>
+</body>
+</html>

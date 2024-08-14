@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video_html</title>
+</head>
+<body>
+    <div style="text-align:center;"> 
+        <button onclick="play/pause()">play/pause</button>
+        <button onclick="makebig()">big</button>
+        <button onclick="makesmall()">small</button>
+        <button onclick="makenormal()">normal</button>
+        <video width="1000" height="1000" controls>
+        <source src="F:\GOOJARA.TU\movies\Already watched\HITMAN'S WIFE'S BODYGUARD.   [2021].mp4" type="video/mp4">
+        <source src="F:\GOOJARA.TU\movies\Already watched\HITMAN'S WIFE'S BODYGUARD.   [2021].ogg" type="video/mp4">
+    </video>
+    </div>
+    <script>
+        var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+        </script>
+   </body>
+</html>
+
+    
+    

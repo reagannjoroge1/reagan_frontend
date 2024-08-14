@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Products</title>
+    <link rel="icon" href="/images/moranlogo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.24)), url('./images/drugs5.jpg') no-repeat center center/cover;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  height: 2000px;
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card h2 {
+        font-size: 1rem;
+    }
+}
+.topic{
+  display: block;
+  text-align: center;
+}
+h2 p{
+  margin: 0;
+  font-size: 16px;
+  background-color: grey;
+  color :yellow;
+}
+    </style>
+</head>
+<body>  <div class="topic">
+        <img src="/images/moranlogo.jpg">
+      </div>
+    <header>
+        <h1 style="color: greenyellow">Pharmaceutical Products(OTC)</h1>
+    </header>
+    <main>
+    
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/images/Moran_drugs/Moran_drugs2/Bamboo Charcoal Toothpaste.jpg"alt="Front Image" class="front">
+                <img src="/images/Moran_drugs/Moran_drugs2/Bamboo Charcoal Toothpaste (backpage).jpg"alt="Back Image" class="back">
+                <!-- <img src="product1.jpg" alt="Product 1"> -->
+                <h2>Bamboo Charcoal toothpaste.</h2>
+                <p>Price: KES 100</p>
+                <p>105gm.</p>
+            </div>
+            <!-- Repeat .product-card for each product --> 
+            <div class="product-card">
+                <img src="/images/Moran_drugs/Moran_drugs2/Cleansing Charcoal Toothpaste.jpg"alt="Front Image" class="front">
+                <img src="/images/Moran_drugs/Moran_drugs2/Cleansing Charcoal Toothpaste(backpage).jpg"alt="Back Image" class="back">
+                <h2>Cleansing Charcoal Toothpaste.</h2>
+                <p>Price: KES 400</p>
+                <p>100ml.</p>
+            </div>
+        
+        <div class="product-card">
+           <img src="/images/Moran_drugs/Moran_drugs2/Durex (fethetlite).jpg"alt="Front Image" class="front">
+           <img src="/images/Moran_drugs/Moran_drugs2/Durex (fethetlite) (backpage).jpg"alt="Back Image" class="back">
+           <h2>Durex (fethetlite).</h2>
+           <p>Price: KES 280</p>
+           <p>3's</p>
+        </div>
+
+        <div  class="product-card">
+          <!-- <img src="/images/ oran okog">  -->
+        <img src="/images/Moran_drugs/Moran_drugs2/Durex extra safe Easy-on.jpg"alt="Front Image" class="front">
+        <img src="/images/Moran_drugs/Moran_drugs2/Durex extra safe Easy-on   (backpage).jpg"alt="Back Image" class="back">
+        <h2>Durex extra safe Easy-on.</h2>
+        <p>Price: KES 280</p>
+        <p>3's</p>
+        </div>
+
+
+        <div  class="product-card">
+        <img src="/images/Moran_drugs/Moran_drugs2/Durex extra safe.jpg"alt="Front Image" class="front">
+        <img src="/images/Moran_drugs/Moran_drugs2/Durex extra safe(backpage).jpg"alt="Back Image" class="back">
+        <h2>Durex extra safe.</h2>
+        <p>Price: KES 280</p>
+        <p>3's.</p>
+        </div>
+
+
+
+        <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Durex feels.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Durex feels  (backpage).jpg"alt="Back Image" class="back">
+            <h2>Durex feels.</h2>
+            <p>Price: KES 280</p>
+            <p>3's</p>
+        </div>
+
+
+        <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/durex originals.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/durex originals   (backpage).jpg"alt="Back Image" class="back">
+            <h2>durex originals.</h2>
+            <p>Price: KES 280</p>
+            <p>3's</p>
+        </div>
+
+        <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Durex pleasure me.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Durex pleasure me (backpage).jpg"alt="Back Image" class="back">
+            <h2>Durex pleasure me.</h2>
+            <p>Price: KES 280</p>
+            <p>3's</p>
+        </div>
+
+        <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's Friend  (Menthnol and eucalyptus).jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's Friend  (Menthnol and eucalyptus)(backpage).jpg"alt="Back Image" class="back">
+            <h2>Friend's  Friend  (Menthnol and eucalyptus).</h2>
+            <p>Price: KES 190</p>
+            <p>25g.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend  Aniseed.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend  Aniseed   (backpage).jpg"alt="Back Image" class="back">
+            <h2>Fisherman's friend  Aniseed.</h2>
+            <p>Price: KES 190.</p>
+            <p>25g.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend (cherry).jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend (cherry)  (backpage).jpg"alt="Back Image" class="back">
+            <h2>Fisherman's friend (cherry)</h2>
+            <p>Price: KES 190</p>
+            <p>25g.</p>  
+        </div>
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend blackcurrant.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend blackcurrant  (backpage).jpg"alt="Back Image" class="back">
+            <h2>Fisherman's friend blackcurrant.</h2>
+            <p>Price: KES 190</p>
+            <p>25g</p>  
+        </div>
+
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend Mint.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's friend Mint (backpage).jpg"alt="Back Image" class="back">
+          
+            <h2>Fisherman's friend Mint</h2>
+            <p>Price: KES 190</p>
+            <p>25g.</p>
+        </div>
+           
+          <div class="product-card">
+          <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's Friend spearman.jpg"alt="Front Image" class="front">
+          <img src="/images/Moran_drugs/Moran_drugs2/Fisherman's Friend spearman   (backpage).jpg"alt="Back Image" class="back">
+          <h2>Fisherman's Friend spearman.</h2>
+          <p>Price: KES 190</p>
+          <p>25g.</p>
+        </div>
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Infacol  (40mg-ml).jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Infacol  (40mg-ml)(backpage).jpg"alt="Back Image" class="back">
+          
+            <h2>Infacol  (40mg-ml)</h2>
+            <p>Price: KES 190</p>
+            <p>25g.</p></div>
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/K-Y.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/K-Y (backpage).jpg"alt="Back Image" class="back">
+          
+            <h2>KY Jelly sterile</h2>
+            <p>Price: KES 850</p>
+            <p>82g.</p>
+        </div>
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip (cold and flu).jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip (cold and flu) (backpage).jpg"alt="Back Image" class="back">
+            <h2>Lemsip (cold and flu)</h2>
+            <p>Price: KES 1100</p>
+            <p>10's.</p> 
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip (honey and ginger).jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip  (honey and ginger)    (backpage).jpg"alt="Back Image" class="back">
+            <h2>Lemsip (honey and ginger).</h2>
+            <p>Price: KES 1120</p>
+            <p>10's.</p> 
+        </div>
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip cold and flu lemon.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip (cold and flu) (backpage).jpg"alt="Back Image" class="back">
+            <h2>Lemsip cold and flu lemon.</h2>
+           <table>
+            <tr><td>Price: KES 550 </td><td>5's</td>  </tr>
+            <tr><td>Price: KES 1030 </td><td>10's</td>  </tr>
+           </table>
+           </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip max day and night 16 capsules.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Lemsip max day and night 16 capsules(backpage).jpg"alt="Back Image" class="back">
+            <h2>Lemsip max day and night 16 capsules</h2>
+            <p>Price: KES 1100</p>
+            <p>10's.</p> 
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Moratech BP monitor.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Moratech BP monitor (backpage).jpg"alt="Back Image" class="back">
+            <h2>Moratech BP Monitor</h2>
+            <p>Price:KES 2850</p>
+            <p>1's.</p> 
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Neateeth.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Neateeth (backpage).jpg"alt="Back Image" class="back">
+            <h2>Neateeth</h2>
+            <p>Price: KES 400</p>
+            <p>30's.</p>
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Pearl drops.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Pearl drops (backpage).jpg"alt="Back Image" class="back">
+            <h2>Pearl Drops</h2>
+            <p>Price: KES 550</p>
+            <p>50ml.</p> 
+        </div>
+
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strawberry flavoured lube.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strawberry flavoured lube  (backpage).jpg"alt="Back Image" class="back">
+            <h2>Strawberry flavoured lube</h2>
+            <!-- <p>Price: Kes </p> -->
+            <!-- <p>Short description of the product.</p> -->
+        </div>
+
+          <div   class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils (triple action).jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils (triple action) (backpage).jpg"alt="Back Image" class="back">
+            <h2>Strepsils (triple action)</h2>
+            <p>Price:KES 900</p>
+            <p>16's.</p>  
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils honey and lemon.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils honey and lemon (backpage).jpg"alt="Back Image" class="back">
+            <h2>Strepsils honey and lemon</h2>
+            <p>Price: KES 900</p>
+            <p>16's</p> 
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils Orange with Vitamin C.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils Orange with Vitamin C(backpage).jpg"alt="Back Image" class="back">
+            <h2>Strepsils Orange with Vitamin C</h2>
+            <p>Price: KES 900</p>
+            <p>16's.</p>  
+        </div>
+
+          <div   class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils original lezenges.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Strepsils original lezenges    (backpage).jpg"alt="Back Image" class="back">
+            <h2>Strepsils original lezenges </h2>
+            <p>Price: KES 750</p>
+            <p>16's.</p> 
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Sudocrem.jpg"alt="Front Image" class="front">
+            <img src="/images/Moran_drugs/Moran_drugs2/Sudocrem  (backpage).jpg"alt="Back Image" class="back">
+            <h2>Sudocrem</h2>
+            <p>Price: KES 905</p>
+            <p>125g.</p>  
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Transpore 3 inch.jpg"alt="Front Image" class="front">
+            <h2>Transpore 3 inch</h2>
+            <p>Price: KES 750</p>
+            <p>6's.</p>  
+        </div>
+
+          <div  class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Transpore 2-inch.jpg"alt="Front Image" class="front">
+            <h2>Transpore 2 inch</h2>
+            <p>Price: KES 750</p>
+            <p>6's</p>  
+        </div>
+
+          <div class="product-card">
+            <img src="/images/Moran_drugs/Moran_drugs2/Transpore 1-inch.jpg"alt="Front Image" class="front">
+            <h2>Transpore 12-inch</h2>
+            <p>Price: KES 1200</p>
+            <p>12's</p>  
+        </div>
+    </div>
+    </main>
+</body>
+</html>

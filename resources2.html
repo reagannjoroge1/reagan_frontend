@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our products</title>
+    <link rel="icon" href="/images/moranlogo.jpg">
+    <style>
+        /* Basic styling */
+        body {
+           
+            background: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.24)), url('./images/drugs4.jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            margin: 100px;
+            overflow-x: hidden;
+            padding: 20px;
+            background-color: #e0e0e0; /* Light gray background */
+        }
+         /* Search bar styling */
+        #search-bar{
+            border: 2px solid blue;
+            border-radius: 7px;
+            max-width: 95%;
+            width: 98.8%;
+            padding: 20px;
+            margin: 10px ;
+            text-align: center;
+            position: fixed;  /* Make the search bar fixed */
+            top: -15px;  /* Position it at the top of the page */
+            left: 0;  /* Position it at the left of the page */
+            z-index: 100;  /* Ensure the search bar stays on top of other elements */
+        }
+        #search-bar input[type="text"] {
+            width: calc(100% - 30px); /* Accommodate space for icon */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #search-bar input:placeholder-shown{
+             color: yellow;
+        }
+        #search-bar button {
+            /* margin: 100px; */
+            /* width: 100%; */
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00a57a; /* Lighter green button */
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #search-bar :placeholder-shown {
+            color: #ccc;
+        }
+
+        #search-bar button:hover {
+            background-color: #00805b; /* Darker green on hover */
+        }
+        /* Search icon */
+        #search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #ccc;
+        }
+        /* Image container styling */
+        #image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        #image-container img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #ddd; /* Thin gray border */
+            border-radius: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer; /* Indicate download on hover */
+            transition: opacity 0.3s ease-in-out;
+        }
+        #image-container img:hover {
+            opacity: 0.8;
+            transform: scale(1.1); 
+            
+        }
+
+        /* Individual image container */
+        .image-item {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative; /* For image description overlay */
+        }
+        .image-item p {
+            width: 10px;
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 10%;
+            background-color: rgba(128, 128, 128, 0.349); /* Semi-transparent black overlay */
+            color: yellow;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+        }
+        a{ 
+            color: blue;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            text-align: center;
+            margin-left: 630px;
+            
+        }
+        a:hover{
+            color: #ffdd57;
+        }
+    #footer_link {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 5px;
+            margin:0;
+            width: 100%;
+        }
+
+        #footer_link .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 120px;
+            /* margin: 0 auto; */
+        }
+
+        .footer_link .container div {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        #footer_link h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+
+        #footer_link p, .footer a {
+            color: #ccc;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        #footer_link a:hover {
+            color: #fff;
+        }
+
+        #footer_link.social-icons a {
+            margin-right: 10px;
+        }
+
+        #footer_link .social-icons a img {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            #footer_link .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        #footer_link>button{
+            width: 18.5%;
+            padding: 23px;
+            text-align: center;
+            font-size: 20px;
+            background-color: greenyellow;
+            box-shadow: rgba(128, 128, 128, 0.7);
+            border-radius: 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .styled-button {
+            margin: 12px;
+            background-color: #00ea0c;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .styled-button:hover {
+            background-color: #3700b3;
+        }
+
+        .styled-button:active {
+            transform: scale(0.95);
+        }
+        .styled-button2 {
+            position: sticky;
+            /* float: right; */
+            margin: 30px 900px;
+            background-color: #00ea0c;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .styled-button2:hover {
+            background-color: #3700b3;
+        }
+
+        .styled-button2:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+<div><input type="text" id="search-bar" placeholder="Search any medicine by description..."></div>
+
+<div id="image-container"></div>
+<script>
+    // JavaScript to handle the search functionality
+    const images = [
+{src:'/images/Moran_drugs/A_drugs/A1.jpg', description: 'ALPHAGAN(2mg/ml)'},
+{src: '/images/Moran_drugs/A_drugs/A2.jpg', description: 'ATENOLOL(100mg)'},
+{src: '/images/Moran_drugs/A_drugs/A3.jpg', description: 'ALENDRONIC(70mg)'},
+{src:"/images/Moran_drugs/A_drugs/A4.jpg",description:"ATENOLOL(50mg)"},
+{src:"/images/Moran_drugs/A_drugs/A5.jpg",description:"ALLOPURINOL(100mg)"},
+{src:"/images/Moran_drugs/A_drugs/A6.jpg",description:"ACICLOVIR(400mg,)"},
+{src:"/images/Moran_drugs/A_drugs/A7.jpg",description:"ATENOLOL(25mg)"},
+{src:"/images/Moran_drugs/A_drugs/A8.jpg",description:"ANTEPSIN(1g)"},
+{src:"/images/Moran_drugs/A_drugs/A9.jpg",description:"ALLOPURINOL(300mg)"},
+{src:"/images/Moran_drugs/A_drugs/A10.jpg",description:"ANUSOL SUPPOSITORIES"},
+{src:"/images/Moran_drugs/A_drugs/A11.jpg",description:"ARICEPT(5mg)"},
+{src:"/images/Moran_drugs/A_drugs/A12.jpg",description:"AVELOX(400mg)"},
+{src:"/images/Moran_drugs/A_drugs/A13.jpg",description:"AMARYL(4mg)Tablet"},
+{src:"/images/Moran_drugs/A_drugs/A14.jpg",description:"AMARYL(2mg)Tablet"},
+{src:"/images/Moran_drugs/A_drugs/A15.jpg",description:"ANUSOL OINTMENT"},
+{src:"/images/Moran_drugs/A_drugs/A16.jpg" ,description:"AMARYL(1mg)"},
+{src:"/images/Moran_drugs/A_drugs/A17.jpg",description:"AEROCORT INHALER"},
+{src:"/images/Moran_drugs/A_drugs/A18.jpg",description:"AZATHIOPRINE(50mg)"},
+{src:"/images/Moran_drugs/A_drugs/A19.jpg",description:"ATACAND(16mg)tablet"},
+{src:"/images/Moran_drugs/A_drugs/A20.jpg",description:"ATORVASTATIN(20mg)"},
+{src:"/images/Moran_drugs/A_drugs/A21.jpg",description:"ATACAND(8mg)"},
+{src:"/images/Moran_drugs/A_drugs/A22.jpg",description:"AMARYL(3mg)"},
+{src:"/images/Moran_drugs/A_drugs/A23.jpg",description:"ATORVASTATIN(20mg)"},
+{src:"/images/Moran_drugs/A_drugs/a24.jpg",description:"AERIUS(5mg)"},
+{src:"/images/Moran_drugs/A_drugs/a29.jpg",description:"AMITRIPTYLINE (25mg)"},
+{src:"/images/Moran_drugs/A_drugs/A25.jpg",description:"ATARAX(25mg)"},
+{src:"/images/Moran_drugs/A_drugs/A26.jpg",description:"ATACAND(16mg/12.5mg)"},
+{src:"/images/Moran_drugs/A_drugs/a28.jpg",description:"AVODART(0.5mg)"},
+{src:"/images/Moran_drugs/B_drugs/B1.jpg",description:"BUDERCORT INHALER"},
+{src:"/images/Moran_drugs/B_drugs/B3.jpg",description:"BISOPROLOL(2.5mg)"},
+{src:"/images/Moran_drugs/B_drugs/B4.jpg",description:"BETASERC(8mg)"},
+{src:"/images/Moran_drugs/B_drugs/B6.jpg",description:"BISOPROLOL(1.25mg)"},
+{src:"/images/Moran_drugs/B_drugs/B7.jpg",description:"BRUFEN (400mg)"},
+{src:"/images/Moran_drugs/B_drugs/B11.jpg",description:"BAZUKA GEL"},
+{src:"/images/Moran_drugs/B_drugs/B12.jpg",description:"BETASERC (24mg)"},
+{src:"/images/Moran_drugs/C_drugs/C.jpg", description:"CYTOTEC (20ug)"} ,
+{src:"/images/Moran_drugs/C_drugs/C1.jpg" ,description:"CORDARONE(200mg)"},
+{src:"/images/Moran_drugs/C_drugs/C2.jpg" ,description:"COVERAM(5mg)"},
+{src:"/images/Moran_drugs/C_drugs/C3.jpg" ,description:"COVERAM(10mg/5mg)"},
+{src:"/images/Moran_drugs/C_drugs/C4.jpg" ,description:"CLOPIXOL(200ml)"},
+{src:"/images/Moran_drugs/C_drugs/C5.jpg" ,description:"CLOPIDOGREL(75mg)"},
+{src:"/images/Moran_drugs/C_drugs/C6.jpg" ,description:"COVERAM(5mg/10mg)"},
+{src:"/images/Moran_drugs/C_drugs/C7.jpg" ,description:"COVERSYL(5mg)"},
+{src:"/images/Moran_drugs/C_drugs/C8.jpg" ,description:"CAFERGOT(1mg/100mg)"},
+{src:"/images/Moran_drugs/C_drugs/C9.jpg" ,description:"COLCHICINE(500ug)"},
+{src:"/images/Moran_drugs/C_drugs/C10.jpg",description:"CANESTEN(20g)"},
+{src:"/images/Moran_drugs/C_drugs/C11.jpg" ,description:"CLOMID(50mg)"},
+{src:"/images/Moran_drugs/C_drugs/C12.jpg",description:"CRESTOR(20mg)"},
+{src:"/images/Moran_drugs/C_drugs/C13.jpg" ,description:"CRESTOR(5mg)"},
+{src:"/images/Moran_drugs/C_drugs/C14.jpg",description:"CRESTOR"},
+{src:"/images/Moran_drugs/C_drugs/C15.jpg" ,description:"CIPRALEX(20mg)"},
+{src:"/images/Moran_drugs/C_drugs/C16.jpg" ,description:"CIPRALEX(10mg)"},
+{src:"/images/Moran_drugs/C_drugs/ca.jpg" ,description:"COLCHICINE(500ug)"},
+{src:"/images/Moran_drugs/D_drugs/D1.jpg" ,description:"DILATREND(12.5mg)"},
+{src:"/images/Moran_drugs/D_drugs/D2.jpg" ,description:"DERMOVATE(20g)"},
+{src:"/images/Moran_drugs/D_drugs/D3.jpg" ,description:"DUPHASTON(10mg)"},
+{src:"/images/Moran_drugs/D_drugs/D4.jpg",description:"DIANE(35mg)"},
+{src:"/images/Moran_drugs/D_drugs/D5.jpg",description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D6.jpg",description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D7.jpg",description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D8.jpg",description:"DILATREND(6.5mg)"},
+{src:"/images/Moran_drugs/D_drugs/D9.jpg" ,description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D10.jpg" ,description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D11.jpg" ,description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D12.jpg" ,description:"DIGOXIN(125ug)"},
+{src:"/images/Moran_drugs/D_drugs/D13.jpg" ,description:"DAONIL(5mg)"},
+{src:"/images/Moran_drugs/D_drugs/D14.jpg" ,description:"DESMOPRESSIN(0.2mg)"},
+{src:"/images/Moran_drugs/D_drugs/D15.jpg" ,description:"DIFLUCAN(150mg)"},
+{src:"/images/Moran_drugs/D_drugs/D16.jpg" ,description:"DERMOVATE(20g)"},
+{src:"/images/Moran_drugs/D_drugs/D17.jpg" ,description:"MEDROL(40mg/ml)"},
+{src:"/images/Moran_drugs/D_drugs/D18.jpg" ,description:"DUREX CONDOM"},
+{src:"/images/Moran_drugs/D_drugs/D19.jpg" ,description:"DILATREND(25mg)"},
+{src:"/images/Moran_drugs/D_drugs/D20.jpg" ,description:"MEDROL(80mg/2ml)"},
+{src:"/images/Moran_drugs/D_drugs/D21.jpg" ,description:"DALACIN C(300g)"},
+{src:"/images/Moran_drugs/D_drugs/D22.jpg",description:"DIAMICRON MR(30mg)"},
+{src:"/images/Moran_drugs/D_drugs/D23.jpg" ,description:"DETRUSITOL(2mg)"},
+{src:"/images/Moran_drugs/E_drugs/E1.jpg",description:"EXODERIL %1 KREM"},
+{src:"/images/Moran_drugs/E_drugs/E2.jpg" ,description:"EBIXA (10mg)"},
+{src:"/images/Moran_drugs/E_drugs/E3.jpg" ,description:"EPILIM (200mg)"},
+{src:"/images/Moran_drugs/F_drugs/F1.jpg" ,description:"FLUANXOL(40mg/2ml)"},
+{src:"/images/Moran_drugs/F_drugs/F2.jpg" ,description:"FINASTERIDE(5mg)"},
+{src:"/images/Moran_drugs/F_drugs/F3.jpg",description:"FISHERMAN'S(25mg)"},
+{src:"/images/Moran_drugs/F_drugs/F4.jpg" ,description:"FLUOXETINE"},
+{src:"/images/Moran_drugs/G_drugs/G1.jpg" ,description:"GALVUS(50mg)"},
+{src:"/images/Moran_drugs/G_drugs/G2.jpg" ,description:"GALVUS(50mg/1000mg)"},  
+{src:"/images/Moran_drugs/G_drugs/G3.jpg" ,description:"GALVUS(50mg/850mg)"},
+{src:"/images/Moran_drugs/G_drugs/G4.jpg" ,description:"GLYCEROL (2g)"},
+{src:"/images/Moran_drugs/G_drugs/G5.jpg" ,description:"GLYCEROL (4g) "},
+{src:"/images/Moran_drugs/G_drugs/G6.jpg" ,description:"GETRYL(4mg) "},
+{src:"/images/Moran_drugs/G_drugs/G7.jpg" ,description:"GLYCEROL (1g)"},
+{src:"/images/Moran_drugs/G_drugs/G8.jpg" ,description:"GVAGZOL"},
+{src:"/images/Moran_drugs/I_drugs/I1.jpg" ,description:"ISOPTIN SR(240mg)"},
+{src:"/images/Moran_drugs/J_drugs/J1.jpg",description:"JANUMET (50/1000mg)"},
+{src:"/images/Moran_drugs/K_drugs/K1.jpg" ,description:"KAMAGRA ORAL JELLY"},
+{src:"/images/Moran_drugs/K_drugs/K2.jpg" ,description:"KEPPRA(500mg)"},
+{src:"/images/Moran_drugs/K_drugs/K3.jpg" ,description:"KEPPRA(100mg/ml)"},
+{src:"/images/Moran_drugs/K_drugs/K4.jpg" ,description:"KEPPRA(250mg)"},
+{src:"/images/Moran_drugs/K_drugs/K5.jpg" ,description:"K-CORT INJECTION"},
+{src:"/images/Moran_drugs/K_drugs/K6.jpg" ,description:"KLACiD(500mg)"},
+{ src:"/images/Moran_drugs/K_drugs/K7.jpg" ,description:"K-Y"},
+{src:"/images/Moran_drugs/L_drugs/L1.jpg",description:"LIPIGET(10mg)"},
+{src:"/images/Moran_drugs/L_drugs/L2.jpg" ,description:"LEMSIP"},
+{src:"/images/Moran_drugs/L_drugs/L3.jpg" ,description:"LIPITOR(20mg)"},
+{src:"/images/Moran_drugs/L_drugs/L4.jpg" ,description:"LAMICTAL(25mg)"},
+{ src:"/images/Moran_drugs/L_drugs/L5.jpg",description:"LABETALOL(200mg)"},
+{src:"/images/Moran_drugs/L_drugs/L6.jpg",description:"LEMSIP(5 Sachets)"},
+{ src:"/images/Moran_drugs/L_drugs/L7.jpg",description:"LEMSIP(10 Sachets)"},
+{src:"/images/Moran_drugs/L_drugs/L9.jpg",description:"LYRICA(75mg)"},
+{src:"/images/Moran_drugs/L_drugs/L10.jpg",description:"LEMSIP"},
+{src:"/images/Moran_drugs/L_drugs/L11.jpg",description:"LEFLOX(500mg)"},
+{src:"/images/Moran_drugs/L_drugs/L12.jpg",description:"LISINOPRIL(10mg)"},
+{src:"/images/Moran_drugs/L_drugs/L13.jpg",description:"LEFLOX(750mg)"},
+{src:"/images/Moran_drugs/L_drugs/L14.jpg",description:"LAMICTAL(100mg)"},
+{src:"/images/Moran_drugs/M_drugs/M1.jpg" ,description:"MOUTHWASH CHARCOAL(10mg)"},
+{src:"/images/Moran_drugs/M_drugs/M2.jpg", description:"MYCOPHENOLATE(360mg)"},
+{src:"/images/Moran_drugs/M_drugs/M3.jpg" ,description:"MIRTAZAPINE(15mg)"},
+{src:"/images/Moran_drugs/M_drugs/M4.jpg" ,description:"MEMANTINE(10mg)"},
+{src:"/images/Moran_drugs/M_drugs/M5.jpg" ,description:"MESTINON(60mg)"},
+{src:"/images/Moran_drugs/M_drugs/M6.jpg" ,description:"MORATECH BP MONITOR"},
+{src:"/images/Moran_drugs/N_drugs/N1.jpg",description:"NATRILX SR"},
+{src:"/images/Moran_drugs/N_drugs/N2.jpg", description:"NORVASC(10mg)"},
+{src:"/images/Moran_drugs/N_drugs/N3.jpg", description:"NYTOL HERBAL Tablets"},
+{src:"/images/Moran_drugs/N_drugs/N4.jpg" ,description:"NORVASC(5mg)"},
+{src:"/images/Moran_drugs/N_drugs/N5.jpg", description:"NEXIUM(40mg)"},
+{src:"/images/Moran_drugs/N_drugs/N6.jpg",description:"NEATEETH(50ml)"},
+{src:"/images/Moran_drugs/N_drugs/N7.jpg" ,description:"NEXIUM(20mg)"},
+{src:"/images/Moran_drugs/O_drugs/O1.jpg", description:"OLD SPICE ROCK"},
+{src:"/images/Moran_drugs/O_drugs/O2.jpg",description:"OLD SPICE CAPTAIN"},
+{src:"/images/Moran_drugs/O_drugs/O3.jpg", description:"OPTREX EYE DROPS"},
+{src:"/images/Moran_drugs/O_drugs/O4.jpg", description:"OPTREX EYE DROPS"},
+{src:"/images/Moran_drugs/O_drugs/O5.jpg", description:"OTRIVINE"},
+{src:"/images/Moran_drugs/O_drugs/O6.jpg",description:"OPTREX EYE DROPS"},
+{src:"/images/Moran_drugs/O_drugs/O7.jpg", description:"OPTREX EYE WASH"},
+{src:"/images/Moran_drugs/O_drugs/O8.jpg", description:"ONE CALL PLUS"},
+{src:"/images/Moran_drugs/P_drugs/P1.jpg" ,description:"PLAVIX (75mg)"},
+{src:"/images/Moran_drugs/P_drugs/P2.jpg" ,description:"PRIMOLUT"},
+{src:"/images/Moran_drugs/P_drugs/P3.jpg" ,description:"PRED FORTE(5ml)"},
+{src:"/images/Moran_drugs/P_drugs/P4.jpg" ,description:"POLIGRIP"},
+{src:"/images/Moran_drugs/P_drugs/P5.jpg" ,description:"PEARL DROPS"},
+{src:"/images/Moran_drugs/R_drugs/R1.jpg" ,description:"RISPERIDONE(3mg)"},
+{src:"/images/Moran_drugs/R_drugs/R2.jpg" ,description:"ROSUVASTATIN(20mg)"},
+{src:"/images/Moran_drugs/R_drugs/R3.jpg" ,description:"ROVISTA(20mg)"},
+{src:"/images/Moran_drugs/S_drugs/S1.jpg" ,description:"SINEMET(25/100mg)"},
+{src:"/images/Moran_drugs/S_drugs/S2.jpg",description:"SUSTANON (250mg/ml)"},
+{src:"/images/Moran_drugs/S_drugs/S3.jpg" ,description:"STUGERON(25mg)"},
+{src:"/images/Moran_drugs/S_drugs/S4.jpg" ,description:"SUDOCREM"},
+{src:"/images/Moran_drugs/S_drugs/S5.jpg",description:"SIMVASTATIN(40mg)"},
+{src:"/images/Moran_drugs/S_drugs/S6.jpg",description:"SIMVASTATIN(20mg)"},
+{src:"/images/Moran_drugs/S_drugs/S7.jpg" ,description:"PLETAL(100mg)"},
+{src:"/images/Moran_drugs/S_drugs/S9.jpg" ,description:"SPASMOMEN(40mg)"},
+{src:"/images/Moran_drugs/S_drugs/S10.jpg",description:"STRAWBERRY FLAVOURED LUBE"},
+{src:"/images/Moran_drugs/S_drugs/S11.jpg" ,description:"FLAVOURED LUBE"},
+{src:"/images/Moran_drugs/S_drugs/S12.jpg" ,description:"SIMVASTATIN(100mg)"},
+{src:"/images/Moran_drugs/S_drugs/S11.jpg" ,description:"SIMVASTATIN(10mg)"},
+{src:"/images/Moran_drugs/S_drugs/S13.jpg",description:"SOLID SODIUM"},
+// {src:"/images/Moran_drugs/T_drugs/T1.jpg" ,description:"TOOTHPASTE(CHARCOAL)"},
+{src:"/images/Moran_drugs/T_drugs/T2.jpg",description:"TOOTHPASTE(BAMBOO)"},
+{src:"/images/Moran_drugs/T_drugs/T3.jpg",description:"TRIPLIXAM(10mg/2.5mg/10mg)"},
+{src:"/images/Moran_drugs/T_drugs/T4.jpg" ,description:"TRAJENTA(5mg)"},
+{src:"/images/Moran_drugs/T_drugs/T5.jpg", description:"TRIPLIXAM"},
+{src:"/images/Moran_drugs/T_drugs/T6.jpg", description:"TRIPLIXAM"},
+{src:"/images/Moran_drugs/T_drugs/T7.jpg", description:"TREVIA(100mg)"},
+{src:"/images/Moran_drugs/T_drugs/T8.jpg",description:"TAMSOLIN(0.4mg)"},
+{src:"/images/Moran_drugs/T_drugs/T9.jpg", description:"TENORMIN(100mg)"},
+{src:"/images/Moran_drugs/T_drugs/T10.jpg" ,description:"TAVANIC(500mg)"},
+{src:"/images/Moran_drugs/T_drugs/T11.jpg",description:"TENORMIN(50mg)"},
+{src:"/images/Moran_drugs/T_drugs/T12.jpg" ,description:"TRAVOCORT (10mg/g)"},
+{src:"/images/Moran_drugs/T_drugs/T13.jpg", description:"TRAVOGEN CREAM(1%)"},
+{src:"/images/Moran_drugs/T_drugs/T14.jpg",description:"TADARISE-20(20mg)"},
+{src:"/images/Moran_drugs/T_drugs/T15.jpg" ,description:"TRAVOGEN %1 KREM"},
+{src:"/images/Moran_drugs/T_drugs/T16.jpg", description:"TRIPLIXAM(5mg/1.25mg/10mg)"},
+{src:"/images/Moran_drugs/T_drugs/T17.jpg", description:"TIOVA INHALER"},
+{src:"/images/Moran_drugs/T_drugs/T18.jpg", description:"TAMSOLIN(0.4mg)"},
+{src:"/images/Moran_drugs/V_drugs/V1.jpg" ,description:"VESICARE(10mg)"},
+{src:"/images/Moran_drugs/V_drugs/V2.jpg",description:"VIGAMOX(5mg/ml)"},
+{src:"/images/Moran_drugs/V_drugs/V3.jpg",description:"VENLAFAXINE(37.5mg)"},
+{src:"/images/Moran_drugs/V_drugs/V4.jpg", description:"VESICARE(5mg)"},
+{src:"/images/Moran_drugs/V_drugs/V5.jpg", description:"VASTAREL(35mg)"},
+{src:"/images/Moran_drugs/V_drugs/V6.jpg", description:"VENZIP(75mg)"},
+{src:"/images/Moran_drugs/V_drugs/V7.jpg", description:"VENOFER(100mg)"},
+{src:"/images/Moran_drugs/X_drugs/X1.jpg",description:"XATRAL XL(10mg)"},
+{src:"/images/Moran_drugs/X_drugs/X2.jpg",description:"XARELTO(20mg)"},
+
+{src:"/images/Moran_drugs/Z_drugs/Z1.jpg", description:"ZYPREXA(10mg)"},
+{src:"/images/Moran_drugs/Z_drugs/Z2.jpg",description:"ZYPREXA(5mg)"},
+ // Add more image objects here
+];
+ 
+const searchBar = document.getElementById('search-bar');
+const imageContainer = document.getElementById('image-container');
+
+// Function to display images that are on the site
+const displayImages = (filteredImages) => {
+  imageContainer.innerHTML = '';
+  filteredImages.forEach(image => {
+    const imageItem = document.createElement('div');
+    imageItem.classList.add('image-item');
+    imageItem.innerHTML = `<img src="${image.src}" alt="${image.description}"><p>${image.description}</p>`;
+    imageContainer.appendChild(imageItem);
+
+    // Add event listener to each image for download
+    const img = imageItem.querySelector('img');
+    img.addEventListener('click', () => {
+      const imageUrl = img.src;
+      const filename = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
+      downloadImage(imageUrl, filename);
+    });
+  });
+}; 
+
+// Initial display of all images
+displayImages(images);
+
+// Event listener for search bar
+searchBar.addEventListener('input', (e) => {
+  const searchQuery = e.target.value.toLowerCase();
+  const filteredImages = images.filter(image => image.description.toLowerCase().includes(searchQuery));
+  displayImages(filteredImages);
+});
+
+function downloadImage(imageUrl, filename) {
+    
+  // ... existing downloadImage function logic ...
+}
+
+</script>
+
+    <footer id="footer_link">
+        <div class="container">
+            <div>
+                <a href="ai1.html" class="styled-button">Click to go back.</a>
+                <a href="resources4.html" class="styled-button2">Shop with us Online.</a> 
+            </div>
+        </div>
+    </footer>
+ <p style="margin: 90px 10px; text-align: center; color: aqua;">@Moran pharma 2024</p>
+
+</footer>
+
+</body>
+</html>

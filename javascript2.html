@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punydom_2</title>
+</head>
+<body>
+    <!-- <button onclick="toMeters()">CLICK RIGHT DAMN HERE</button> !-->
+    <p id="demo"></p>
+    
+<script>
+    // const arr=["BMW"," BENZ", "BENTLI", "AUDI", "CHEVROLET"];
+
+// const obj={counter: 0}
+
+// Object.defineProperty(obj,"reset",
+// {get : function(){this.counter= 0;}}
+// );
+// Object.defineProperty(obj,"increment",
+// {get : function(){this.conter++;}}
+// );
+// Object.defineProperty(obj,"decrement",
+// {get : function(){this.counter--;}}
+// );
+// Object.defineProperty(obj,"add",
+// {set : function(value){this.counter += value;}}
+// );
+// Object.defineProperty(obj,"subtract",
+// {set : function(value){this.counter -= value;}}
+// );
+// //play with the counter:
+// obj.reset;
+// obj.add;
+// obj.substract;
+// obj.increment;
+// obj.decrement;
+
+// person.age=person.age.toString()
+// let txt="";
+// for(let x in person){
+//     txt += person[x]+" ";
+// }
+// const myArray=Object.values(person);
+// document.getElementById("demo").innerHTML= myArray;
+// function Person(first, last, age, eyeColor){
+//     this.firstName= firstName;
+//     this.lastName= lastName;
+//     this.age= age;
+//     this.eyeColor= eyeColor;
+//     this.changeName= function(name){
+//         this.lastName = Name;
+//         // return this.firstName+ " " +this.lastName;
+//     }
+// }
+// const myFather= new Person("PETER", "NJOROGE", 53, "brown");
+// const myMother= new Person("LIZ", "MUMBI", 48, "brown");
+// myFather.changeName("MUNA");
+// myFather.name = function (){
+//     return this.firstName+ " " + this.lastName
+// }
+// document.getElementById("demo").innerHTML= "My father is "+ myFather.lastName;
+// +" and he's " +myFather.age+"."+
+// "<br>"+"My mother is "+ myMother.nationality+" and she's "+myMother.age+".";
+// function Person(first, last, age, eye){
+//     this.firstName= first;
+//     this.lastName= last;
+//     this.age= age;
+//     this.eyeColor= blue;
+// }
+// Person.prototype.name = function(){
+//     return this.firstName +"  "+ this.lastName;
+// };
+
+// const myGoat_striker = new Person("Robert", "Lewandowski", 37, "green");
+// document.getElementById("demo").innerHTML= 
+// " My GOAT striker is " + myGoat_striker.name();
+// const name= ["R","E","A","G","A","N"];
+// let text=""
+
+// for(const x of name){
+//  text += x + "<br>";
+// }
+// document.getElementById("demo").innerHTML= text;
+// function myNumbers(){
+// let n= 0;
+// return{
+//     next: function(){
+//         n += 40;
+//         return{value:n, done:false};
+//     }
+//   };
+// }
+// const n= myNumbers();
+// n.next();
+// n.next();
+// n.next();
+// n.next();
+
+// document.getElementById("demo").innerHTML= n.next().value;
+// const myNumbers= {};
+
+// myNumbers[Symbol.iterator] = function(){
+//     let n = 0;
+//     done= false;
+//     return{
+//         next(){
+//             n += 30;
+//             if (n==120){done = true}
+//             return{value:n, done:done};
+//         }
+//     };
+// }
+// let text=""
+// for(const num of myNumbers){
+//  text += num+"<br>"
+// }
+// document.getElementById("demo").innerHTML= text;
+// const letters= new Set(["a","b","c"]);
+
+// const iterator = letters.entries();
+// let text= "";
+// for(const entry of iterator){
+//     text += entry + "<br>";
+// }
+// document.getElementById("demo").innerHTML= text;
+// const a= (a,b)Id("demo").innerHTML= a(10,35);
+// function myFunction(arg1, arg2){
+//   this.firstName = arg1;
+//   this.lastName = arg2;
+//   fullName=function(){
+//     this.firstName +" "+this.lastName
+//   }
+// const myObj= new myFunction("Reagan", "Muna")
+// ("demo").innerHTML= myObject.fullName();
+// const person={
+//     firstName:"Reagan",
+//     lastName:"Muna",
+//     display: function(){
+//         let x= document.getElementById("demo");
+//         x.innerHTML = this.firstName+ " " +this.lastName;
+//     }
+// }
+// let display = person.display.bind(person);
+// setTimeout(display, 3000);
+// undefined= zero;
+// document.getElementById("demo").innerHTML= demo;
+// class Car{
+//     constructor(name, year){
+//         this.name = name;
+//         this.year = year;
+//     }
+//    age(x){
+//     // const date= new Date();
+//     return x - this.year;
+//    }
+// }
+// const date = new Date();
+// let year = date.getFullYear();
+
+// const myCar= new Car( "BENTLI", 1971);
+// // const myCar2= new Car( "LAMBORGHINI", 1970);
+
+// document.getElementById("demo").innerHTML= 
+// "My car is "+ myCar.age(year) +" years old.";
+// class Car{
+// constructor(brand)
+// {this.carname= brand;}
+// present()
+// {return " I have a "+ this.carname;}
+// }
+// class Model extends Car{
+// constructor(brand, mod){
+//     super(brand);
+//     this.model = mod;
+// }
+// show(){
+//     return this.present()+ 
+//     ', it is a' + this.model;
+//  }
+// }
+
+// const myCar = new Model("FORD", "MUSTANG");
+// document.getElementById("demo").innerHTML = myCar.show();
+// class Car
+// {
+//     constructor(name){
+//     this. name = name;
+// }
+//     static hello(x){
+//         return "HELLO!!" + x.name;
+// }
+// }
+// const myCar = new Car("Clients pick a car(s) from our showroom");
+// document.getElementById("demo").innerHTML=
+// Car.hello(myCar);
+// </script>
+// <form>
+    <!-- <label for="cars">CHOOSE A CAR:</label> -->
+     <!-- <select id="cars" name="cars" size="2" multiple>
+      <option value="volkswagon">volkswagon</option>
+      <option value="aston_martin">aston_martin</option>
+      <option value="Mercedes"selected>Mercedes </option>
+      <option value="Bentli">Bentli</option>
+      <option value="Lamborghini">Lamborghini</option>
+      <option value="Bugatti">Bugatti</option>
+      <option value="BMW">BMW</option>
+      <option value="Ford">Ford</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Supra">Supra</option>
+      <option value="Dodge">Dodge</option>
+     </select> -->
+    <!-- <textarea name="message" rows="20" columns="40">
+     The cat was playing in the house 
+    </textarea> -->
+<!-- <input type="submit"> -->
+<!-- <fieldset>
+  <legend> PERSONALITY: </legend>
+  <label for="fname"> firstName</label><br>
+  <input type="text" id="fname" value="John"><br>
+  <label for="lname">lastName</label><br>
+  <input type="text" id="lname" value="Doe"><br><br>
+  <input type="submit" value="submit">
+</fieldset> -->
+<!-- <input list="cars" name="cars">
+<datalist id="cars">
+    <option value="Bentli"></option>
+    <option value="Dodge"></option>
+    <option value="Volvo"></option>
+    <option value="Supra"></option>
+    <option value="Mercedes"></option>
+    <option value="Bugatti"></option>
+    <option value="volkswagon"></option>
+</datalist>
+<input type="submit"> -->
+</form>
+</body>
+</html>
